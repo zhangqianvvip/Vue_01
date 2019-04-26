@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component-2</title>
+  <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+<h1>component-2</h1>
+<hr>
+<div id="app">
+  <panda :here="message"></panda>
+  <jspang :here="china"></jspang>
+</div>
+<script type="text/javascript">
+  var app = new Vue({
+    el:'#app',
+    data:{
+      message:'四川-成都',
+      china:'afdsfsd'
+    },
+    components:{
+      "panda":{
+        template:'<div style="color: blue">Panda from {{here}}}</div>',
+        props:['here']
+      }
+    }
+  })
+</script>
+</body>
+</html>
